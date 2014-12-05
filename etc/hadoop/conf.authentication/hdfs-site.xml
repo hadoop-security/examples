@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- Namenode -->
+  <property>
+    <name>dfs.block.access.token.enable</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>dfs.namenode.keytab.file</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.principal</name>
+    <value>hdfs/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+
+  <!-- WebHDFS (NN and DN) -->
+  <property>
+    <name>dfs.web.authentication.kerberos.keytab</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.web.authentication.kerberos.principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+
+  <!-- Secondary Namenode -->
+  <property>
+    <name>dfs.secondary.namenode.keytab.file</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.secondary.namenode.kerberos.principal</name>
+    <value>hdfs/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>dfs.secondary.namenode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+
+  <!-- JournalNode -->
+  <property>
+    <name>dfs.journalnode.keytab.file</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.principal</name>
+    <value>hdfs/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+
+  <!-- Datanode -->
+  <property>
+    <name>dfs.datanode.address</name>
+    <value>0.0.0.0:1004</value>
+  </property>
+  <property>
+    <name>dfs.datanode.http.address</name>
+    <value>0.0.0.0:1006</value>
+  </property>
+  <property>
+    <name>dfs.datanode.keytab.file</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.datanode.kerberos.principal</name>
+    <value>hdfs/_HOST@EXAMPLE.COM</value>
+  </property>
+
+  <!-- NFS -->
+  <property>
+    <name>dfs.nfs.keytab.file</name>
+    <value>hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.nfs.kerberos.principal</name>
+    <value>hdfs/_HOST@EXAMPLE.COM</value>
+  </property>
+</configuration>

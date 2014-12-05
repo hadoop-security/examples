@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!-- ResourceManager -->
+  <property>
+    <name>yarn.resourcemanager.principal</name>
+    <value>yarn/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.spnego-principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.keytab</name>
+    <value>yarn.keytab</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.webapp.spnego-keytab-file</name>
+    <value>yarn.keytab</value>
+  </property>
+
+  <!-- NodeManager -->
+  <property>
+    <name>yarn.nodemanager.principal</name>
+    <value>yarn/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.webapp.spnego-principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.keytab</name>
+    <value>yarn.keytab</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.webapp.spnego-keytab-file</name>
+    <value>yarn.keytab</value>
+  </property>
+
+  <property>
+    <name>yarn.nodemanager.container-executor.class</name>
+    <value>org.apache.hadoop.yarn.server.nodemanager.LinuxContainerExecutor</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.linux-container-executor.group</name>
+    <value>yarn</value>
+  </property>
+</configuration>

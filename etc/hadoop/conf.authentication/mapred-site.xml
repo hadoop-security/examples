@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <!--
+    ============
+    = YARN/MR2 =
+    ============
+    -->
+
+  <!-- JobHistory Server -->
+  <property>
+    <name>mapreduce.jobhistory.principal</name>
+    <value>mapred/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>mapreduce.jobhistory.webapp.spnego-principal</name>
+    <value>HTTP/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>mapreduce.jobhistory.keytab</name>
+    <value>mapred.keytab</value>
+  </property>
+  <property>
+    <name>mapreduce.jobhistory.webapp.spnego-keytab-file</name>
+    <value>mapred.keytab</value>
+  </property>
+
+  <!--
+    =================
+    = MapReduce/MR1 =
+    =================
+    -->
+
+  <!-- JobTracker -->
+  <property>
+    <name>mapreduce.jobtracker.kerberos.principal</name>
+    <value>mapred/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>mapreduce.jobtracker.keytab.file</name>
+    <value>mapred.keytab</value>
+  </property>
+
+  <!-- TaskTracker -->
+  <property>
+    <name>mapreduce.tasktracker.kerberos.principal</name>
+    <value>mapred/_HOST@EXAMPLE.COM</value>
+  </property>
+  <property>
+    <name>mapreduce.tasktracker.keytab.file</name>
+    <value>mapred.keytab</value>
+  </property>
+
+  <property>
+    <name>mapred.task.tracker.task-controller</name>
+    <value>org.apache.hadoop.mapred.LinuxTaskController</value>
+  </property>
+  <property>
+    <name>mapreduce.tasktracker.group</name>
+    <value>mapred</value>
+  </property>
+
+</configuration>
